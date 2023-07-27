@@ -11,3 +11,8 @@ print( 3 / 2)
 print(3 ** 2)
 print(3 ** 3)
 print(10 ** 6)
+
+print(6 + 2)
+print(16 / 2)
+print(4 * 2)
+print(14 - 6)
