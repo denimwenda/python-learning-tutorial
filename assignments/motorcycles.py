@@ -36,3 +36,30 @@ print("The last motorcycle i owned was a " + last_owned.title() + ".")
 motorcycles = ['honda', 'yamaha', 'suzuki']
 first_owned = motorcycles.pop(0)
 print("The first car i owned was a " + first_owned.title() + ".")
+
+#removing an item
+motorcycles = ['honda', 'yamaha', 'suzui', 'ducati']
+print(motorcycles)
+motorcycles.remove('ducati')
+print(motorcycles)
+
+motorcycles = ['honda', 'yamaha', 'suzuki']
+too_expensive = 'yamaha'
+motorcycles.remove(too_expensive)
+print(motorcycles)
+print("\nA " + too_expensive.title() + " is too expensive for me.")
+
+friends = ['dan', 'rein', 'xaas']
+first = 'dan'
+second = 'rein'
+third = 'xaas'
+print("\n " + first.title() + " you are welcomwed for dinner.")
+print("\n " + second.title() + " you are welcomed for the party")
+print("\n " + third.title() + " you are welcomed for the party")
+
+friends = ['dan', 'rein', 'xaas']
+print(friends)
+friends.insert(1, 'felix')
+print(friends)
+friends.append('toe')
+print(friends)
