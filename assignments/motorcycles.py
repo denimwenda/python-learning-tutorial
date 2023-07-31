@@ -63,3 +63,14 @@ friends.insert(1, 'felix')
 print(friends)
 friends.append('toe')
 print(friends)
+
+#avoiding index errrors working with list
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles[-1])
+
+birds = ['hen', 'dove', 'pigeon', 'turkey']
+print(birds)
+print(birds[2])
+print(birds[-2])
+print(birds[0])
+print(birds[3])
