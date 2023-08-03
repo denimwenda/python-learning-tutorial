@@ -34,5 +34,12 @@ print(locations)
 locations.sort(reverse=True)
 print(locations)
 print(locations)
-locations.sort()
+    locations.sort()
 print(locations)
+
+cars = ['audi', 'bmw', 'subaru', 'toyota']
+for car in cars:
+    if car == 'bmw':
+        print(car.upper())
+    else:
+        print(car.title())
