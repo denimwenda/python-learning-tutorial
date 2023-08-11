@@ -60,3 +60,43 @@ print(alien_0)
 
 del alien_0['points']
 print(alien_0)
+
+number = input("Enter a number, and i will tell you whether it's even or old: ")
+number = int(number)
+
+if number % 2 == 0:
+    print("\nThe number " + str(number) + " is even")
+else:
+    print("\nThe number " + str(number) + " is odd")
+
+car = input("Which type of car do you want: ")
+print("Let me see if i can find you a " + str(car) + ".")
+
+group = input("How many people are in the dinner group: ")
+group = int(group)
+
+if group <= 8:
+    print("The table is ready.")
+else:
+    print("You will have to wait.")
+
+prompt = "\nTell me something, and i will tell it back to you:"
+prompt += "\nEnter 'quit' to end the program."
+
+message = ""
+while message != 'quit':
+    message = input(prompt)
+    print(message)
+
+#using break to exit a loop
+prompt = "\nPlease enter the name of the city you have ever visited:"
+prompt += "\n(Enter 'quit' when you are finished.) "
+
+while True:
+    city = input(prompt)
+
+    if city == 'quit':
+        break
+    else:
+        print("I'd love to go to " + city.title() + "!")
+
