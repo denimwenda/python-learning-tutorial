@@ -18,3 +18,9 @@ for username, user_info in users.items():
 
     print("\tFull name: " + full_name.title())
     print("\tLocation: " + location.title())
+
+def greet_user(username):
+ """Display a simple greeting."""
+ print("Hello, " + username.title() + "!")
+
+greet_user('jesse')
