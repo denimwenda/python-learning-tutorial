@@ -46,3 +46,20 @@ while unconfirmed_users:
 print("\nThe following users have been confirmed:")
 for confirmed_user in confirmed_users:
     print(confirmed_user)
+
+#Passing an arbitray number of arguments
+def make_pizza(*toppings):
+    """Print the list of toppings that have been requested"""
+    print(toppings)
+
+make_pizza('pepperoni')
+make_pizza('mushroom', 'green peppers', 'extra cheese')
+
+def make_pizza(*toppings):
+    """Summarize the pizza we are about to make."""
+    print("\nMaking a pizza with the following toppings:")
+    for topping in toppings:
+        print("- " + topping)
+
+make_pizza('pepperoni')
+make_pizza('mushroom', 'green peppers', 'extra cheese')
