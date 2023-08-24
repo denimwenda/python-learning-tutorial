@@ -63,3 +63,16 @@ def make_pizza(*toppings):
 
 make_pizza('pepperoni')
 make_pizza('mushroom', 'green peppers', 'extra cheese')
+
+#Storing your functions in modules
+#Modules makes it easy to import a program
+#Ways of importing module
+
+#1. Importing an entire module
+#We need first to create a module. A module is a file ending with .py that contains code to import
+def make_pizza(size, *toppings):
+    """Summarize the pizza we are about to make"""
+    print("\nMaking a " + str(size) +
+          "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("- " + topping)
