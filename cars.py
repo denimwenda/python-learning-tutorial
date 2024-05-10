@@ -34,7 +34,7 @@ print(locations)
 locations.sort(reverse=True)
 print(locations)
 print(locations)
-    locations.sort()
+locations.sort()
 print(locations)
 
 cars = ['audi', 'bmw', 'subaru', 'toyota']
