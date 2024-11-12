@@ -476,3 +476,204 @@ print(list(res))
 fruits = ['apple', 'banana', 'cherry']
 res = map(str.upper, fruits)
 print(list(res))
+
+words = ['apple', 'banana', 'cherry']
+res = map(lambda s: s[0], words)
+print(list(res))
+
+s = ['  hello  ', '  world ', ' python  ']
+res = map(str.strip, s)
+print(list(res))
+
+celsius = [0, 20, 37, 100]
+fahrenheit = map(lambda c: (c * 9/5) + 32, celsius)
+print(list(fahrenheit))
+
+# function that filters vowels
+def fun(variable):
+    letters = ['a', 'e', 'i', 'o', 'u']
+    if (variable in letters):
+        return True
+    else:
+        return False
+
+
+# sequence
+sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
+
+# using filter function
+filtered = filter(fun, sequence)
+
+print('The filtered letters are:')
+for s in filtered:
+    print(s)
+
+# a list contains both even and odd numbers. 
+seq = [0, 1, 2, 3, 5, 8, 13]
+
+# result contains odd numbers of the list
+result = filter(lambda x: x % 2 != 0, seq)
+print(list(result))
+
+# result contains even numbers of the list
+result = filter(lambda x: x % 2 == 0, seq)
+print(list(result))
+
+# Define a function to check 
+# if a number is a multiple of 3
+def is_multiple_of_3(num):
+    return num % 3 == 0
+
+
+# Create a list of numbers to filter
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Use filter and a lambda function to
+# filter the list of numbers and only
+# keep the ones that are multiples of 3
+result = list(filter(lambda x: 'i'))
+
+# python code to demonstrate working of reduce()
+
+# importing functools for reduce()
+import functools
+
+# initializing list
+lis = [1, 3, 5, 6, 2]
+
+# using reduce to compute sum of list
+print("The sum of the list elements is : ", end="")
+print(functools.reduce(lambda a, b: a+b, lis))
+
+# using reduce to compute maximum element from list
+print("The maximum element of the list is : ", end="")
+print(functools.reduce(lambda a, b: a if a > b else b, lis))
+
+# python code to demonstrate working of reduce()
+# using operator functions
+
+# importing functools for reduce()
+import functools
+
+# importing operator for operator functions
+import operator
+
+# initializing list
+lis = [1, 3, 5, 6, 2]
+
+# using reduce to compute sum of list
+# using operator functions
+print("The sum of the list elements is : ", end="")
+print(functools.reduce(operator.add, lis))
+
+# using reduce to compute product
+# using operator functions
+print("The product of list elements is : ", end="")
+print(functools.reduce(operator.mul, lis))
+
+# using reduce to concatenate string
+print("The concatenated product is : ", end="")
+print(functools.reduce(operator.add, ["geeks", "for", "geeks"]))
+
+# python code to demonstrate summation
+# using reduce() and accumulate()
+
+# importing itertools for accumulate()
+import itertools
+
+# importing functools for reduce()
+import functools
+
+# initializing list
+lis = [1, 3, 4, 10, 4]
+
+# printing summation using accumulate()
+print("The summation of list using accumulate is :", end="")
+print(list(itertools.accumulate(lis, lambda x, y: x+y)))
+
+# printing summation using reduce()
+print("The summation of list using reduce is :", end="")
+print(functools.reduce(lambda x, y: x+y, lis))
+
+# Python program to  illustrate sum of two numbers.
+def reduce(function, iterable, initializer=None):
+    it = iter(iterable)
+    if initializer is None:
+        value = next(it)
+    else:
+        value = initializer
+    for element in it:
+        value = function(value, element)
+    return value
+
+# Note that the initializer, when not None, is used as the first value instead of the first value from iterable , and after the whole iterable.
+tup = (2,1,0,2,2,0,0,2)
+print(reduce(lambda x, y: x+y, tup,6))
+
+# This code is contributed by aashutoshjha
+
+# LAMBDA FUNCTION
+str1 = 'GeekdforGeeks'
+
+upper = lambda string: string.upper()
+print(upper(str1))
+
+format_numeric = lambda num: f"{num:e}" if isinstance(num, int) else f"{num:,.2f}"
+
+print("Int formatting:", format_numeric(1000000))
+print("float formatting:", format_numeric(999999.789541235))
+
+def cube(y):
+    return y*y*y
+
+lambda_cube = lambda y: y*y*y
+print("Using function defined with `def` keyword, cube:", cube(5))
+print("Using lambda function, cube:", lambda_cube(5))
+
+def cube(y):
+    return y*y*y
+
+lambda_cube = lambda y: y*y*y
+print("Using function defined with `def` keyword, cube:", cube(5))
+print("Using lambda function, cube:", lambda_cube(5))
+
+Max = lambda a, b : a if(a > b) else b
+print(Max(1, 2))
+
+List = [[2,3,4],[1, 4, 16, 64],[3, 6, 9, 12]]
+
+sortList = lambda x: (sorted(i) for i in x)
+secondLargest = lambda x, f : [y[len(y)-2] for y in f(x)]
+res = secondLargest(List, sortList)
+
+print(res)
+
+li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
+
+final_list = list(filter(lambda x: (x % 2 != 0), li))
+print(final_list)
+
+ages = [13, 90, 17, 59, 21, 60, 5]
+adults = list(filter(lambda age: age > 18, ages))
+
+print(adults)
+
+li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
+
+final_list = list(map(lambda x: x*2, li))
+print(final_list)
+
+animals = ['dog', 'cat', 'parrot', 'rabbit']
+uppered_animals = list(map(lambda animal: animal.upper(), animals))
+
+print(uppered_animals)
+
+from functools import reduce
+li = [5, 8, 10, 20, 50, 100]
+sum = reduce((lambda x, y: x + y), li)
+print(sum)
+
+import functools
+lis = [1, 3, 5, 6, 2, ]
+print("The maximum element of the list is : ", end="")
+print(functools.reduce(lambda a, b: a if a > b else b, lis))
